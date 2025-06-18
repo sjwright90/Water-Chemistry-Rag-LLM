@@ -1,0 +1,2 @@
+path/to/additional/file1.pdf
+path/to/additional/file2.pdf

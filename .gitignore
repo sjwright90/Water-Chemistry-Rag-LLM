@@ -192,3 +192,15 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# ChromaDB
+chroma*/
+
+# PDF Files for testing
+pdf_files/
+
+# Log files
+logs/
+
+# Volumes
+volumes/

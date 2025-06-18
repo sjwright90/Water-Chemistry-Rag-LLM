@@ -1,0 +1,4 @@
+target_directory_01
+target_directory_02/subdirectory_01
+target_directory_02/subdirectory_02
+target_directory_03

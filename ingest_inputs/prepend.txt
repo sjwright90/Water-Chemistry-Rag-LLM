@@ -1,0 +1,2 @@
+Absolute path to the parent directory that contains all subdirectories listed in TARGET_DIRS.txt
+Not passed to script, just to copy paste into the CLI

@@ -1,0 +1,57 @@
+services:
+  # COMMENTED B/C APP IS NOT READY YET
+  # postgresql database:
+  # db:
+  #   image: postgres:latest
+  #   container_name: postgres_db
+  #   restart: always
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: mydatabase
+  #   volumes:
+  #     - ./volumes/postgres:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - backend
+
+  # app:
+  #   # image: myapp:latest
+  #   build: .
+  #   container_name: chat_app
+  #   restart: always
+  #   volumes:
+  #     - ./chroma_store:/app/chroma_store
+  #     # something like this at least
+  #   # environment:
+  #   #   - APP_ENV=production
+  #   #   - APP_DEBUG=false
+  #   #   - DATABASE_URL=mysql://user:password@db/mydatabase
+  #   #   - REDIS_HOST=redis
+  #   #   - REDIS_PORT=6379
+  #   # curl http://host.docker.internal:11434 # can use this to access host services
+  #   ports:
+  #     - "8000:8000"
+  #   networks:
+  #     - backend
+  #   # depends_on:
+  #   #   - redis_cache
+  #   #   - db
+  redis:
+    image: redis:latest
+    container_name: redis_cache
+    restart: always
+    volumes:
+      - ./volumes/redis:/data
+    # command: redis-server --appendonly yes
+    environment:
+        - REDIS_HOST=redis
+        - REDIS_PORT=6379
+    ports:
+      - "6379:6379"
+#     networks:
+#       - backend
+# networks:
+#   backend:
+#     driver: bridge
