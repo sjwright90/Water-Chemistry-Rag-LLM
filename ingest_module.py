@@ -52,7 +52,7 @@ def main():
     embedding_model = args.embedding_model
     PERSISTDIRECTORY = args.chroma_store_path
 
-    logs_dir = Path(args.logsDir) / collection_name
+    logs_dir = Path(args.logs_dir) / collection_name
     logs_dir.mkdir(exist_ok=True, parents=True)
 
     print(
